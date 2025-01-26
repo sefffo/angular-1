@@ -1,0 +1,21 @@
+/* #1abc9c */
+.startWindow
+{
+    background-color: #1abc9c;
+}
+
+.avatar
+{
+    width: 300px;
+    height: 300px;
+}
+
+.spann::after{
+
+    content: "";
+    display: block;
+    margin-top: 20px;
+    width: 100px;
+    height: 5px;
+    background-color: #fff;
+}

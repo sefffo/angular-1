@@ -1,0 +1,19 @@
+.About
+{
+    background-color: #1abc9c;
+}
+
+.spann::after{
+
+    content: "";
+    display: block;
+    
+    width: 100px;
+    height: 5px;
+    background-color: #fff;
+}   
+
+.ww
+{
+    width: 800px;
+}

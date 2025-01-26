@@ -1,0 +1,43 @@
+<section class="py-5 ">
+    <div class="container text-center d-flex justify-content-center align-items-lg-center flex-column">
+        <h1 class=" text-capitalize font fw-bolder fs-1">portfolio component</h1>
+        <span class="spann my-3"></span>
+    </div>
+
+    <div class="container">
+        <div class="row g-4">
+            
+            @for (item of img; track $index) {
+                <div class="col-md-4">
+                    <div class="card border-0 position-relative"
+                    (click)="isHidden = false;  modelimg=item;"
+                   
+                    >
+                        <img [src]="item" class=" img-fluid curser-pointer hov">   
+                        <div class="overlay text-white fw-bolder fs-1 d-flex justify-content-center align-items-center">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+<div class="model position-fixed start-0 end-0 top-0 bottom-0 d-flex justify-content-center align-items-center bg-primary bg-opacity-25"
+[class.d-none]="isHidden"
+(click)="hideModel($event.target, eImg)"
+>
+    <img #eImg [src]="modelimg" alt="" class="img-fluid w-50">
+</div>
+</section>
+
+<!-- 
+
+<div class="card border-0">
+    <img src="/images/port1.png" class=" img-fluid">   
+        <div class="card-body">
+        </div>
+</div>
+
+
+-->
